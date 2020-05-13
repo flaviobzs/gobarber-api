@@ -1,8 +1,8 @@
-import { parseISO } from "date-fns";
-import { container } from "tsyringe";
-import { Request, Response } from "express";
+import { parseISO } from 'date-fns';
+import { container } from 'tsyringe';
+import { Request, Response } from 'express';
 
-import CreateAppointmentService from "@modules/appointments/services/CreateAppointmentService";
+import CreateAppointmentService from '@modules/appointments/services/CreateAppointmentService';
 
 export default class AppointmentsController {
   public async create(response: Response, request: Request): Promise<Response> {

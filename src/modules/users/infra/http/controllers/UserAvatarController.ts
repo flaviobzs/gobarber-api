@@ -1,7 +1,7 @@
-import { Request, Response } from "express";
-import { container } from "tsyringe";
+import { Request, Response } from 'express';
+import { container } from 'tsyringe';
 
-import UpdateUserAvatarService from "@modules/users/services/UpdateUserAvatarService";
+import UpdateUserAvatarService from '@modules/users/services/UpdateUserAvatarService';
 
 export default class UserAvatarController {
   public async update(response: Response, request: Request): Promise<Response> {
