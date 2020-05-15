@@ -26,11 +26,11 @@ describe('CreateAppointment', () => {
     });
 
     expect(appointment).toHaveProperty('id');
-    expect(appointment.provider_id).toBe('123123');
+    expect(appointment.provider_id).toBe('provider_id');
   });
 
   it('should not be able to create two appointments on the same time', async () => {
-    const appointmentDate = new Date(2020, 4, 10, 11);
+    const appointmentDate = new Date(2020, 4, 18, 11);
 
     await createAppointment.execute({
       date: appointmentDate,

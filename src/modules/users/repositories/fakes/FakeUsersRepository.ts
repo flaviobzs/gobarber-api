@@ -1,6 +1,7 @@
 import { uuid } from 'uuidv4';
 
 import IUsersRepository from '@modules/users/repositories/IUsersRepository';
+
 import ICreateUserDTO from '@modules/users/dtos/ICreateUserDTO';
 import IFindAllProvidersDTO from '@modules/users/dtos/IFindAllProvidersDTO';
 
@@ -37,7 +38,6 @@ class FakeUsersRepository implements IUsersRepository {
     const user = new User();
 
     Object.assign(user, { id: uuid() }, userData);
-    // Object.assign(user, { id: uuid(), name, email, password });
 
     this.users.push(user);
 
