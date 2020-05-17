@@ -14,6 +14,7 @@ describe('ResetPassword', () => {
   beforeEach(() => {
     fakeUsersRepository = new FakeUsersRepository();
     fakeUserTokensRepository = new FakeUserTokensRepository();
+    fakeHashProvider = new FakeHashProvider();
 
     resetPassword = new ResetPasswordService(
       fakeUsersRepository,
@@ -83,8 +84,8 @@ describe('ResetPassword', () => {
 
     await expect(
       resetPassword.execute({
-        password: '123123',
         token,
+        password: '123456',
       }),
     ).rejects.toBeInstanceOf(AppError);
   });
